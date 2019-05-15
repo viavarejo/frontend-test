@@ -1,0 +1,602 @@
+.corpopg {
+    background-color:#ffffff;
+    width:1100px;
+    height:550px;
+    margin-top: 30px;
+    margin-left: 124.5px;
+    position:fixed;
+    
+}
+/*Aqui começa o topo da aplicação */
+.topo2 {
+    width:1100px;
+    height:60px;
+    background-color:#DCDCDC;
+}
+.topo3 {
+    width:800px;
+    height:60px;
+    background-color:#DCDCDC;
+    margin:auto;
+    line-height:60px;
+    padding-left:50px;
+}
+.logomarca {
+    width:50px;
+    height:53px;
+    padding-top:7px;
+    background-color:#DCDCDC;
+    float:left;
+}
+.texto {
+    width:280px;
+    height:60px;
+    padding-left:20px;
+    font-weight:bold;
+    font-size:18px;
+    background-color:#DCDCDC;
+    float:left;
+}
+.topo4 {
+    width:450px;
+    height:60px;
+    font-weight:bold;
+    font-size:18px;
+    background-color:#DCDCDC;
+    float:left;
+}
+.menu {
+    float:right;
+}
+.menu ul,
+.menu li,
+.fundo{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.menu li{
+    float:left;
+    padding-left:10px;
+    padding-right:10px;
+}
+/* Aqui termina o topo da aplicação*/
+
+.conteudo {
+    width:280px;
+    height:260px;
+    background-color:#ffffff;
+    margin-top:20px;
+    margin-left:175px;
+    float: left;
+    border:1px solid #A9A9A9;
+    border-radius:3px;
+    position: relative;
+}
+form {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.text-titulo {
+    font-size:18px;
+    font-weight:bold;
+    padding-left:85px;
+    padding-bottom:20px;
+}
+.conteudo2 {
+    width:480px;
+    height:260px;
+    background-color:#ffffff;
+    margin-top:20px;
+    margin-left:480px
+    
+}
+table,td{
+    border:1px solid #A9A9A9;
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+}
+.prod3,
+.vl3{
+border-bottom:double #A9A9A9;
+}
+table{
+    width:480px;
+    height:200px;
+    table-layout:fixed;
+    border-collapse:collapse
+}
+.merca{
+    text-align: left;
+    padding-left:25px;
+}
+.vl,.vl1{
+    text-align:right;
+    padding-right:30px;
+}
+.vl2,.vl3 {
+    text-align:right;
+    padding-right:30px; 
+}
+.total{
+    text-align: left;
+    padding-left:25px;  
+}
+button{
+    border:none;
+    background-color: #ffffff;
+}
+table{
+    border-top:none;
+    border-bottom:none;
+}
+.prod3,
+.vl3{
+border-bottom:double #A9A9A9;
+}
+
+@media screen and (min-width:200px) and (max-width:500px) 
+and (orientation:portrait) {
+    .corpopg {
+        background-color:#ffffff;
+        width:100%;
+        max-width:500px;
+        height:550px;
+        margin-top: 30px;
+        margin-left: 124.5px;
+        position:fixed;
+        margin:auto;
+    }
+    .topo2 {
+        width:100%;
+        width:500px;
+        height:60px;
+        background-color:#DCDCDC;
+    }
+    .topo3 {
+        width:100%;
+        height:60px;
+        background-color:#DCDCDC;
+        margin:auto;
+        line-height:60px;
+        padding-left:50px;
+    }
+    .logomarca {
+        width:50px;
+        height:50px;
+        padding-top:7px;
+        background-color:#DCDCDC;
+        float:left;
+    }    
+    .topo4 {
+        width:100%;
+        max-width:250px;
+        height:60px;
+        font-weight:bold;
+        font-size:18px;
+        background-color:#DCDCDC;
+        margin-left:0px;
+        display:none;
+    }
+    .conteudo {
+        width:100%;
+        max-width:260px;
+        height:200px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:60px;
+        border:1px solid #A9A9A9;
+        border-radius:3px;
+        position: relative;
+    }
+    .text-titulo{
+        display:none;
+    }
+    form {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .conteudo2 {
+        width:100%;
+        height:260px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:10px;
+    }
+    table,td{
+        border:1px solid #A9A9A9;
+        border-left:none;
+        border-right:none;
+    }
+    table{
+        width:100%;
+        max-width:380px;
+        height:200px;
+        border-collapse:collapse;
+        table-layout:fixed;
+    }
+    .merca{
+        text-align: left;
+        padding-left:25px;
+    }
+    .vl{
+        text-align:right;
+        padding-right:30px;
+    }
+    .vl1,.vl2,.vl3{
+        text-align:right;
+        padding-right:30px; 
+    }
+    .prod{
+        text-align: left;
+        padding-left:10px;
+    }
+    .total{
+        text-align: left;
+        padding-left:30px;  
+    }
+    button{
+        border:none;
+        background-color: #ffffff;
+    }
+    table{
+        border-top:none;
+        border-bottom:none;
+    }
+    .prod3,
+    .vl3{
+    border-bottom:double #A9A9A9;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:500px) 
+and (orientation:landscape) {
+    .corpopg {
+        background-color:#ffffff;
+        width:100%;
+        max-width:500px;
+        height:550px;
+        margin-top: 30px;
+        margin-left: 124.5px;
+        position:fixed;
+        margin:auto;
+    }
+    .topo2 {
+        width:100%;
+        width:500px;
+        height:60px;
+        background-color:#DCDCDC;
+    }
+    .topo3 {
+        width:100%;
+        height:60px;
+        background-color:#DCDCDC;
+        margin:auto;
+        line-height:60px;
+        padding-left:50px;
+    }
+    .logomarca {
+        width:50px;
+        height:50px;
+        padding-top:7px;
+        background-color:#DCDCDC;
+        float:left;
+    }    
+    .topo4 {
+        width:100%;
+        max-width:250px;
+        height:60px;
+        font-weight:bold;
+        font-size:18px;
+        background-color:#DCDCDC;
+        margin-left:0px;
+        display: none;
+    }
+    .conteudo {
+        width:100%;
+        max-width:260px;
+        height:200px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:60px;
+        border:1px solid #A9A9A9;
+        border-radius:3px;
+        position: relative;
+    }
+    .text-titulo{
+        display:none;
+    }
+    form {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .conteudo2 {
+        width:100%;
+        height:260px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:10px;
+    }
+    table,td{
+        border:1px solid #A9A9A9;
+        border-left:none;
+        border-right:none;
+    }
+    table{
+        width:100%;
+        max-width:380px;
+        height:200px;
+        border-collapse:collapse;
+        table-layout:fixed;
+    }
+    .merca{
+        text-align: left;
+        padding-left:25px;
+    }
+    .vl{
+        text-align:right;
+        padding-right:30px;
+    }
+    .vl1,.vl2,.vl3{
+        text-align:right;
+        padding-right:30px; 
+    }
+    .prod{
+        text-align: left;
+        padding-left:10px;
+    }
+    .total{
+        text-align: left;
+        padding-left:30px;  
+    }
+    button{
+        border:none;
+        background-color: #ffffff;
+    }
+    table{
+        border-top:none;
+        border-bottom:none;
+    }
+    .prod3,
+    .vl3{
+    border-bottom:double #A9A9A9;
+    }
+}
+
+
+@media screen and (min-width:501px) and (max-width:700px) {
+    .corpopg {
+        background-color:#ffffff;
+        width:100%;
+        max-width:700px;
+        height:600px;
+        margin-top: 30px;
+        margin-left: 124.5px;
+        position:fixed;
+        margin:auto;
+    }
+    .topo2 {
+        width:100%;
+        width:700px;
+        height:60px;
+        background-color:#DCDCDC;
+    }
+    .topo3 {
+        width:100%;
+        height:60px;
+        background-color:#DCDCDC;
+        margin:auto;
+        line-height:60px;
+        padding-left:50px;
+    }
+    .logomarca {
+        width:50px;
+        height:50px;
+        padding-top:7px;
+        background-color:#DCDCDC;
+        float:left;
+    }    
+    .topo4 {
+        width:100%;
+        max-width:700px;
+        height:60px;
+        font-weight:bold;
+        font-size:18px;
+        background-color:#DCDCDC;
+        margin-left:0px;
+        display:none;
+    }
+    .conteudo {
+        width:100%;
+        max-width:600px;
+        height:200px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:60px;
+        border:1px solid #A9A9A9;
+        border-radius:3px;
+        position: relative;
+    }
+    .text-titulo{
+        display:none;
+    }
+    form {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .conteudo2 {
+        width:100%;
+        height:450px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:60px;
+    }
+    table,td{
+        border:1px solid #A9A9A9;
+        border-left:none;
+        border-right:none;
+    }
+    table{
+        width:100%;
+        max-width:450px;
+        height:200px;
+        border-collapse:collapse;
+        table-layout:fixed;
+    }
+    .merca{
+        text-align: left;
+        padding-left:25px;
+    }
+    .vl{
+        text-align:right;
+        padding-right:30px;
+    }
+    .vl1,.vl2,.vl3{
+        text-align:right;
+        padding-right:30px; 
+    }
+    .prod{
+        text-align: left;
+        padding-left:10px;
+    }
+    .total{
+        text-align: left;
+        padding-left:30px;  
+    }
+    button{
+        border:none;
+        background-color: #ffffff;
+    }
+    table{
+        border-top:none;
+        border-bottom:none;
+    }
+    .prod3,
+    .vl3{
+    border-bottom:double #A9A9A9;
+    }
+}
+
+@media screen and (min-width:701px) and (max-width:900px) {
+    .corpopg {
+        background-color:#ffffff;
+        width:100%;
+        max-width:900px;
+        height:700px;
+        margin-top: 30px;
+        margin-left: 124.5px;
+        position:fixed;
+        margin:auto;
+    }
+    .topo2 {
+        width:100%;
+        width:900px;
+        height:60px;
+        background-color:#DCDCDC;
+    }
+    .topo3 {
+        width:100%;
+        height:60px;
+        background-color:#DCDCDC;
+        margin:auto;
+        line-height:60px;
+        padding-left:50px;
+    }
+    .logomarca {
+        width:50px;
+        height:50px;
+        padding-top:7px;
+        background-color:#DCDCDC;
+        float:left;
+    }    
+    .topo4 {
+        width:100%;
+        max-width:900px;
+        height:60px;
+        font-weight:bold;
+        font-size:18px;
+        background-color:#DCDCDC;
+        margin-left:0px;
+        display:none;
+    }
+    .conteudo {
+        width:100%;
+        max-width:600px;
+        height:200px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:60px;
+        border:1px solid #A9A9A9;
+        border-radius:3px;
+        position: relative;
+    }
+    .text-titulo{
+        display:none;
+    }
+    form {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .conteudo2 {
+        width:100%;
+        height:500px;
+        background-color:#ffffff;
+        margin-top:20px;
+        margin-left:60px;
+    }
+    table,td{
+        border:1px solid #A9A9A9;
+        border-left:none;
+        border-right:none;
+    }
+    table{
+        width:100%;
+        max-width:550px;
+        height:200px;
+        border-collapse:collapse;
+        table-layout:fixed;
+    }
+    .merca{
+        text-align: left;
+        padding-left:25px;
+    }
+    .vl{
+        text-align:right;
+        padding-right:30px;
+    }
+    .vl1,.vl2,.vl3{
+        text-align:right;
+        padding-right:30px; 
+    }
+    .prod{
+        text-align: left;
+        padding-left:10px;
+    }
+    .total{
+        text-align: left;
+        padding-left:30px;  
+    }
+    button{
+        border:none;
+        background-color: #ffffff;
+    }
+    table{
+        border-top:none;
+        border-bottom:none;
+    }
+    .prod3,
+    .vl3{
+    border-bottom:double #A9A9A9;
+    }
+}

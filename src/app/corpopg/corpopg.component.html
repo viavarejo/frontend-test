@@ -1,0 +1,81 @@
+<script type="text/javascript" src="transacao.js"></script>
+<div class="corpopg">
+    {{titulo}}
+    <!--Aqui inicia o topo da aplicação-->
+    <div class="topo2">
+        <div class="topo3">
+            <div class="logomarca"><img src="https://img.icons8.com/ios/50/000000/diversity.png"></div>
+            <div class="texto">Controle financeiro</div>
+            <div class="topo4">
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li>Dashboard |</li>
+                            <li>Resumo |</li>
+                            <li> Configurações |</li>
+                        </ul>
+                    </nav> 
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <!--Aqui termina o topo da aplicação-->
+
+    <!--Começa conteúdo-->
+    <div class ="conteudo"><span class="text-titulo">Nova transação</span>
+        <form  method="post">
+            <br/>
+            Tipo de transação <br/>
+            <select style= "width:230px; border:0,7px solid #A9A9A9; color:#A9A9A9;" 
+            type="text" name="opcoes">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+            </select><br/>
+            Nome da mercadoria <br/>
+            <input id="cadprod" style= "width:230px; color:#A9A9A9;" type="text"
+             placeholder="Mercadoria" name="nomemercadoria" id="produto"/><br/>
+            Valor<br/>
+            <input id="cadvalor" style= "width:230px; color:#A9A9A9;" type="text"
+             placeholder="R$ 0,00" name="valor" id="preco"/><br/><br/>
+            <input style= "width:230px; background-color:#404040; 
+            color:#FFF;" type="submit" value="Adicionar transação" onclick="addproduto()"/>
+        </form>
+    </div>
+    <div class ="conteudo2" >
+        <table>
+            <tr>
+                <th colspan="2" class="th1">Extrato de transações</th>
+            </tr>
+            <tr>
+                <th class="merca">Mercadoria</th>
+                <th class="vl">Valor</th>
+            </tr>
+            <tr>
+                <td>
+                <button> + 
+                </button>Smart TV 4k Led 75"</td><td class="vl1">R$ 10.600,00</td>
+            </tr>
+            <tr>
+                <td><button >-</button> Imposto</td>
+                <td  class="vl2">R$ 150,00</td>
+            </tr>
+            <tr>
+                <td class="prod3"><button >+</button> Frete</td>
+                <td class="vl3">R$ 80,00</td>
+            </tr>
+            <tr>
+                <th class="total">Total</th>
+                <th class="vl">R$ 10.530,00</th>
+            </tr>
+            <tr>
+                <th colspan="2" class="vl">[Lucro]</th>
+            </tr>  
+        </table>
+    </div>
+</div>
+
+
+
+
+    
