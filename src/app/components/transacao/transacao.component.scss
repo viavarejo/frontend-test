@@ -37,8 +37,12 @@ $grey-color: #979797;
     background-color: #333333;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
-
+.formulario div button:disabled{
+    background-color: #adadad;
+    cursor: not-allowed;
+}
 
 //media para ipad
 @media only screen and(max-width:768px){
