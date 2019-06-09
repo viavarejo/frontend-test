@@ -5,12 +5,17 @@ import { Transacao } from '../models/extrato.model';
 export class TransacaoService {
 
     public saveTransaction(transaction: Transacao): void {
-        const transactions = JSON.parse(localStorage.getItem('transacoes'));
+        let transactions = this.getTransactions();
+
+        if (transactions === null) {
+            transactions = [];
+        }
+
         transactions.push(transaction);
         localStorage.setItem('transacoes', JSON.stringify(transactions));
     }
 
     public getTransactions(): Array<any> {
-       return JSON.parse(localStorage.getItem('transacoes'));
+        return JSON.parse(localStorage.getItem('transacoes'));
     }
 }

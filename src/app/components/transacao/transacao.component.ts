@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Transacao } from '../models/extrato.model';
+import { TransacaoService } from '../services/transacao.service';
 
 @Component({
   selector: 'app-transacao',
@@ -9,13 +10,14 @@ import { Transacao } from '../models/extrato.model';
 export class TransacaoComponent implements OnInit {
 
   transacao: Transacao;
-  constructor() {
+  constructor(private service: TransacaoService) {
     this.transacao = new Transacao();
   }
 
   ngOnInit() {
   }
   public submit(): void {
-    console.log(this.transacao);
+    this.service.saveTransaction(this.transacao);
+    this.transacao = new Transacao();
   }
 }
