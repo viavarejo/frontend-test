@@ -8,14 +8,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>teste1usadhuashduashduashduashdaushduashdsauhdsuahduashdauhduahdauhdsau</td>
-        <td>teste2</td>
+      <tr *ngFor="let items of transactions">
+        <td><span>{{items.tipoTransacao === '0' ? '-' : '+'}}</span>
+          {{items.nomeMercadoria}}</td>
+        <td>{{items.valor | currency:'BRL':'symbol'}}</td>
       </tr>
       <tr>
         <td>Total</td>
-        <td>200okok</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+        <td>
+          <p>{{total | currency:'BRL':'symbol'}}<br/><span>[{{total < 0 ? 'Prejuizo' : 'Lucro' }}]</span></p> </td> </tr> </tbody>
+              </table> </div>

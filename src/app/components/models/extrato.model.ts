@@ -1,5 +1,5 @@
 export class Transacao {
-    tipoTransacao: number;
+    tipoTransacao: string;
     nomeMercadoria: string;
     valor: any;
 }
