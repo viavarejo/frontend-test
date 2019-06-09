@@ -1,0 +1,14 @@
+.main-container{
+    margin-top: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+//media para ipad
+@media only screen and(max-width:768px){
+    .main-container{
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
