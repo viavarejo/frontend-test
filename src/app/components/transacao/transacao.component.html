@@ -1,0 +1,26 @@
+<div class="transacao">
+  <span>Nova Transação</span>
+  <div class="formulario">
+    <form #form="ngForm" id="form">
+      <div>
+        <span>Tipo de Transação</span>
+        <select [(ngModel)]="transacao.tipoTransacao" name="tipoTransacao" required>
+          <option [value]="0">Compra</option>
+          <option [value]="1">Venda</option>
+        </select>
+      </div>
+      <div>
+        <span>Nome da mercadoria</span>
+        <input [(ngModel)]="transacao.nomeMercadoria" name="nomeMercadoria" type="text" placeholder="Input" required>
+      </div>
+      <div>
+        <span>Valor</span>
+        <input [(ngModel)]="transacao.valor" name="valor" type="text" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',',align:'left' }"
+         required>
+      </div>
+      <div>
+        <button [disabled]="form.invalid" (click)="submit()">Adicionar Transação</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="extrato">
+  <span>Extrato de transações</span>
+  <table>
+    <thead>
+      <tr>
+        <th>Mercadoria</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of transactions">
+        <td><span>{{items.tipoTransacao === '0' ? '-' : '+'}}</span>
+          {{items.nomeMercadoria}}</td>
+        <td>{{items.valor | currency:'BRL':'symbol'}}</td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td>
+          <p>{{total | currency:'BRL':'symbol'}}<br/><span>[{{total < 0 ? 'Prejuizo' : 'Lucro' }}]</span></p> </td> </tr> </tbody>
+              </table> </div>

@@ -1,0 +1,127 @@
+$grey:#e0e0e0;
+.box{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 15px;
+}
+nav{
+    background-color: $grey;
+    height: 80px;
+}
+.logo{
+    position: absolute;
+    left: 170px;
+}
+.logo img{
+    vertical-align: middle;
+}
+.logo span{
+    font-size: 23px;
+}
+.menu{
+    background-color: white;
+    padding-inline-start: 0;
+    position: absolute;
+    right: 60px;
+}
+.menu ul li{
+   position: relative;
+   display: inline-block;
+   padding: 15px 15px 15px 15px;
+   cursor: pointer;
+}
+.menu ul li:nth-child(2)::after,.menu ul li:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    border: solid 0.5px black;
+    height: 50%;
+    margin-left: 15px;
+}
+.menu ul li:nth-child(2)::before{
+    margin-left: -15px;
+}
+.menu .svg{
+    display: none;
+    background: $grey;
+    cursor: pointer;
+}
+.menu .svg img{
+    height: 34px;
+}
+
+// medias
+@media only screen and(max-width:1024px) {
+    .logo{
+        left: 20px;
+    }
+    .menu{
+        right: 20px;
+    }
+}
+
+@media only screen and(max-width:768px) {
+    .menu ul{
+        display: none;
+    }
+    .menu .svg{
+        display: block;
+    }
+    .logo span{
+        position: relative;
+        left: 87%;
+    }
+}
+
+@media only screen and(max-width:768px) {
+    .menu ul{
+        display: none;
+    }
+    .menu .svg{
+        display: block;
+    }
+    .logo span{
+        position: relative;
+        --Calc:200px;
+        left: calc(100% - var(--Calc)/2);
+    }
+}
+
+@media only screen and(max-width:630px) {
+    .logo span{
+        left: 8%;
+    }
+}
+.side-navbar{
+   
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100%;
+    background: #333333;
+    color: white;
+    text-align: right;
+    width: 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.side-navbar img{
+    height: 23px;
+    padding: 22px 31px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.side-navbar ul{
+    position: relative;
+    top: 90px;
+    font-size: 25px;
+}
+.side-navbar ul li{
+    padding: 11px 27px 13px;
+}
+.side-navbar ul li:hover{
+   background-color: $grey;
+   color:black; 
+}

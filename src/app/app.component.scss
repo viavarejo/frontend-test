@@ -1,0 +1,38 @@
+.main-container{
+    margin-top: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+}
+
+.main-container div{
+    flex: auto;
+}
+.line{
+    border-bottom: solid 0.5px #979797;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 1px;
+    display: none;
+}
+//media para ipad
+@media only screen and(max-width:768px){
+    .main-container{
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: unset;
+    }
+    .main-container div{
+        flex:none;
+    }
+}
+//media para mobile
+@media only screen and(max-width:420px){
+    .line{
+        display: block;
+    }
+}

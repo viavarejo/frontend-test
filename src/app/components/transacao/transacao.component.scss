@@ -1,0 +1,90 @@
+$height:  32px;
+$grey-color: #979797;
+.transacao{
+    text-align: center;
+    max-width: 400px;
+    border: solid 0.8px $grey-color;
+    border-radius: 6px;
+}
+.transacao > span{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+.formulario{
+    text-align: left;
+    padding: 10px;
+    color:#404040;
+}
+
+.formulario div{
+  margin-bottom: 20px;
+}
+.formulario div input,.formulario div select{
+    display: block;
+    width: 100%;
+    height: $height;
+    border: solid 1px $grey-color;
+    color: $grey-color;
+    border-radius: 5px;
+    text-indent: 10px;
+}
+.formulario div button{
+    width: 100%;
+    height: $height;
+    background-color: #333333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.formulario div button:disabled{
+    background-color: #adadad;
+    cursor: not-allowed;
+}
+
+//media para ipad
+@media only screen and(max-width:768px){
+    .formulario form{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        flex-flow: row wrap;
+        height: 116px;
+    }
+    .formulario form > div{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .formulario form div:nth-child(2){
+        flex: 2;
+    }
+    
+    .formulario form div:nth-child(4){
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 190px;
+    }
+    .transacao{
+        max-width: 100%;
+    }
+}
+
+@media only screen and(max-width:500px){
+    .formulario form{
+        display: unset;
+        height: auto;
+    }
+    .formulario form div:nth-child(4){
+        position: relative;
+        width: auto;
+        right: 0;
+        bottom:0;
+    }
+
+    .transacao{
+        border: none;
+    }
+}
