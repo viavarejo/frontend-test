@@ -1,0 +1,26 @@
+.extrato{
+    text-align: center;
+}
+.extrato > span{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+.extrato table{
+    width: 100%;
+    border-collapse:collapse;
+}
+.extrato table tr{
+    border-bottom: 0.5px solid black;
+}
+
+.extrato table tr td{
+    padding: 10px;
+    white-space: pre-wrap;
+}
+.extrato table tbody tr:last-child{
+    border-top: 0.5px solid black;
+    border-bottom: none;
+}

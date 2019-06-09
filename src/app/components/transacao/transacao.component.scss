@@ -46,22 +46,22 @@ $grey-color: #979797;
 
 //media para ipad
 @media only screen and(max-width:768px){
-    .formulario{
+    .formulario form{
         display: flex;
         justify-content: space-between;
         position: relative;
         flex-flow: row wrap;
         height: 116px;
     }
-    .formulario > div{
+    .formulario form > div{
         margin-left: 10px;
         margin-right: 10px;
     }
-    .formulario div:nth-child(2){
+    .formulario form div:nth-child(2){
         flex: 2;
     }
     
-    .formulario div:nth-child(4){
+    .formulario form div:nth-child(4){
         position: absolute;
         right: 9px;
         bottom: 0;
@@ -73,11 +73,11 @@ $grey-color: #979797;
 }
 
 @media only screen and(max-width:500px){
-    .formulario{
+    .formulario form{
         display: unset;
         height: auto;
     }
-    .formulario div:nth-child(4){
+    .formulario form div:nth-child(4){
         position: relative;
         width: auto;
         right: 0;
