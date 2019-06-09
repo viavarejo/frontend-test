@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Transacao } from '../models/extrato.model';
 
 @Component({
   selector: 'app-transacao',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransacaoComponent implements OnInit {
 
-  constructor() { }
+  transacao: Transacao;
+  constructor() {
+    this.transacao = new Transacao();
+  }
 
   ngOnInit() {
   }
-
+  public submit(): void {
+    console.log(this.transacao);
+  }
 }
