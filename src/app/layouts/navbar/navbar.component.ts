@@ -11,5 +11,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
+  public openSidenav(): void {
+    (document.querySelector('#sidenav') as HTMLElement).style.width = '80%';
+  }
 
+  public closeSidenav(): void {
+    (document.querySelector('#sidenav') as HTMLElement).style.width = '0';
+  }
 }
