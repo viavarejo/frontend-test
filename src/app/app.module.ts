@@ -7,6 +7,8 @@ import { TransacaoComponent } from './components/transacao/transacao.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
 import { FormsModule } from '@angular/forms';
 import { TransacaoService } from './components/services/transacao.service';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { TransacaoService } from './components/services/transacao.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CurrencyMaskModule
   ],
   providers: [
     TransacaoService

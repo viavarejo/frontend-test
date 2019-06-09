@@ -15,7 +15,8 @@
       </div>
       <div>
         <span>Valor</span>
-        <input [(ngModel)]="transacao.valor" name="valor" type="text" required>
+        <input [(ngModel)]="transacao.valor" name="valor" type="text" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',',align:'left' }"
+         required>
       </div>
       <div>
         <button [disabled]="form.invalid" (click)="submit()">Adicionar Transação</button>
