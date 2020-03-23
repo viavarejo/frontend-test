@@ -32,7 +32,7 @@ O layout fornecido não é muito complexo visualmente, nosso maior interesse é 
 - Conhecimento de Javascript orientado a objeto, funcional e/ou reativo
 - Utilização correta de git
 - Testes unitários
-- O código deverá funcionar no Chrome e no [Firefox 31](#firefox-31)
+- O código deverá funcionar no Chrome
 
 ## Tecnologias que você pode utilizar
 
@@ -42,10 +42,4 @@ Na parte de CSS, você é livre de utilizar qualquer preprocessador também, mas
 
 Sobre _task manager_, _bundler_ e similares, fica à vontade, apenas pedimos que você adicione instruções detalhadas sobre como fazer funcionar a aplicação.
 
-### Firefox 31
-*Windows*:
-https://ftp.mozilla.org/pub/firefox/releases/31.0/win32/pt-BR/
-
-*Ou versão portável*:
-https://sourceforge.net/projects/portableapps/files/Mozilla%20Firefox%2C%20Portable%20Ed./Mozilla%20Firefox%20ESR%2C%20Portable%20Edition%2031.6.0/
 
