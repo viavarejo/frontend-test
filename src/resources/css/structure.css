@@ -1,0 +1,27 @@
+.main-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu,
+.navbar-menu li{
+    display: flex;
+    align-items: center;
+}
+
+.main-content .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-new-transaction,
+.section-new-transaction form{
+    display: flex;
+    flex-direction: column;
+}

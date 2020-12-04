@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, inicial-scale=1">
-        <meta name="description" content="Controle financeiro para transações de compras e vendas de mercadorias. Teste de front-end Via Varejo.">
 
-        <link rel="shortcut icon" href="public/img/favicon.ico">
-        <title>Controle Financeiro</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, inicial-scale=1">
+    <meta name="description" content="Controle financeiro para transações de compras e vendas de mercadorias. Teste de front-end Via Varejo.">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="resources/css/default.css">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <img src="" alt="Logo CF">
+    <link rel="shortcut icon" href="resources/midia/favicon.png">
+    <title>Controle Financeiro</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="resources/css/structure.css">
+    <link rel="stylesheet" href="resources/css/default.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="brand"></a>
+                <h1 class="system-title">
                     Controle financeiro
                 </h1>
-                <nav>
-                    <li>
-                        <ul><a href="#">dashboard</a></ul>
-                        <ul><a href="#">resumo</a></ul>
-                        <ul><a href="#">configurações</a></ul>
-                    </li>
-                </nav>
             </div>
-        </header>
 
-        <main class="container">
-            <section>
+            <nav class="navbar-menu">
+                <li>
+                    <ul><a href="#">dashboard</a></ul>
+                    <ul><a href="#">resumo</a></ul>
+                    <ul><a href="#">configurações</a></ul>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="section-new-transaction">
                 <h1>Nova transação</h1>
                 <form>
-                    <label>
-                        Tipo de transação
-                        <select name="" id="" required>
-                            <option value="1">Compra</option>
-                            <option value="2">Venda</option>
-                        </select>
-                    </label>
+                    <label for="transaction-type">Tipo de transação</label>
+                    <select name="input-transaction-type" id="transaction-type" required>
+                        <option value="1">Compra</option>
+                        <option value="2">Venda</option>
+                    </select>
 
-                    <label>
-                        Nome da mercadoria
-                        <input type="text" name="input-name" id="name" required>
-                    </label>
+                    <label for="name">Nome da mercadoria</label>
+                    <input type="text" name="input-name" id="name" placeholder="Digite o nome da mercadoria" required>
 
-                    <label>
-                        Valor
-                        <input type="number" name="input-price" id="price" min="0.01" step="0.01" required>
-                    </label>
+                    <label for="price">Valor (R$)</label>
+                    <input type="number" name="input-price" id="price" min="0.01" step="0.01" placeholder="R$ 0,00" required>
 
-                    <button type="submit">Adicionar transação</button>
+                    <button type="submit" class="buy-button">Adicionar transação</button>
                 </form>
             </section>
 
-            <section>
+            <section class="section-transaction-statement">
                 <h1>Extrato de transações</h1>
-                <table>
+                <table class="table-transaction-statement">
                     <thead>
                         <tr>
                             <th></th>
@@ -77,11 +78,13 @@
                         <tr>
                             <th></th>
                             <th><em>Total</em></th>
-                            <th><em>R$  <sub>[lucro]</sub></em></th>
+                            <th><em>R$ <sub>[lucro]</sub></em></th>
                         </tr>
                     </tfoot>
                 </table>
             </section>
-        </main>
-    </body>
+        </div>
+    </main>
+    <footer class="main-footer"></footer>
+</body>
 </html>
