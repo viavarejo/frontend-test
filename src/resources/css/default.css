@@ -25,6 +25,23 @@ img{
 
 /* header */
 /* nav */
+.main-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu,
+.navbar-menu ul{
+    display: flex;
+    align-items: center;
+}
+
 .main-header{
     width: 100%;
     margin-bottom: 1.2em;
@@ -51,15 +68,16 @@ img{
     height: 2.75em;
 }
 
-.navbar-menu ul {
+.navbar-menu li {
+    list-style-type: none;
     padding: 0 1em;
 }
 
-.navbar-menu ul {
+.navbar-menu li {
     border-left: 1px solid #aaa;
 }
 
-.navbar-menu ul:first-child {
+.navbar-menu li:first-child {
     border-left: none;
 }
 
@@ -77,6 +95,17 @@ img{
 
 /* main */
 /* sections */
+.main-content .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-new-transaction,
+.section-new-transaction form{
+    display: flex;
+    flex-direction: column;
+}
+
 .section-new-transaction {
     width: 33%;
     padding: 1em;
@@ -155,4 +184,154 @@ img{
     left: 0;
     bottom: 0;
     background-color: #000;
+}
+
+@media (max-width: 1100px){
+    .container{
+        padding: 1em;
+    }
+}
+
+@media not all and (max-width: 880px){
+    .open-menu,
+    .close-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 880px){
+    .navbar-brand{
+        flex-grow: 1;
+    }
+
+    .main-content .container{
+        flex-direction: column;
+    }
+
+    .section-new-transaction,
+    .section-transaction-statement
+    {
+        width: 100%;
+    }
+
+    .navbar-menu{
+        flex-direction: column;
+
+        background: #000;
+        padding: 1em;
+        margin: 0;
+
+        height: 100%;
+        width: 90%;
+        max-width: 300px;
+
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -90%;
+
+        text-align: right;
+    }
+
+    .active-menu .navbar-menu{
+        right: 0;
+    }
+
+    .navbar-menu,
+    .navbar-menu ul{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-menu li{        
+        padding: 1em 0;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        border-left: none;
+    }
+
+    .active-menu::after{
+        content: "";
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background: transparent;
+    }
+
+    .navbar-menu a {
+        color: #fff;
+    }
+    
+    .navbar-menu a:hover {  
+        opacity: 0.6;
+        text-decoration: underline;
+    }
+}
+
+@media (max-width:540px){
+
+    .brand{
+        background-image: url(../midia/logo-viavarejo-mobile.svg);
+        width: 120px;
+        background-position: 50%;
+        height: 68px;
+    }
+
+    .section-new-transaction h1{
+        display: none;
+    }
+
+    .section-new-transaction{
+        border: none;
+        padding: 0 0 2em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .section-transaction-statement{
+        padding: 2em 0 0 0;
+    }
+}
+
+/* mobile menu */ 
+.open-menu,
+.close-menu{
+    background: none;
+    border: 0;
+    outline: none;
+    -webkik-appearance: none;
+    font-size: 2em;
+    text-indent: -999em;
+}
+
+.open-menu{
+    height: 0;
+    width: .75em;
+    padding-top: .125em;
+    border-top: .375em double #222;
+    border-bottom: .125em solid #222;
+    float: right;
+    vertical-align: middle;
+}
+
+.close-menu{
+    font-size: 2.75em;
+    color: #fff;
+    position: relative;
+    height: 1em;
+    width: 1em;
+}
+
+.close-menu::before{
+    content: '\00D7';
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
 }

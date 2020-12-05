@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, inicial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Controle financeiro para transações de compras e vendas de mercadorias. Teste de front-end Via Varejo.">
 
     <link rel="shortcut icon" href="resources/midia/favicon.png">
     <title>Controle Financeiro</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="resources/css/structure.css">
     <link rel="stylesheet" href="resources/css/default.css">
 </head>
 
@@ -24,12 +23,15 @@
                 </h1>
             </div>
 
+            <button type="button" class="open-menu">Menu</button>
+
             <nav class="navbar-menu">
-                <li>
-                    <ul><a href="#">dashboard</a></ul>
-                    <ul><a href="#">resumo</a></ul>
-                    <ul><a href="#">configurações</a></ul>
-                </li>
+                <button type="button" class="close-menu">Fechar</button>
+                <ul>
+                    <li><a href="#">dashboard</a></li>
+                    <li><a href="#">resumo</a></li>
+                    <li><a href="#">configurações</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -86,5 +88,6 @@
         </div>
     </main>
     <footer class="main-footer"></footer>
+    <script src="resources/js/menu.js"></script>
 </body>
 </html>
