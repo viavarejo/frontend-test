@@ -52,9 +52,9 @@ img{
 .brand{
     background-image: url(../midia/logo-viavarejo.svg);
     background-size: cover;
-    width: 210px;
+    width: 150px;
+    height: 33px;
     background-position: 50%;
-    height: 2.75em;
 }
 
 .system-title{
@@ -102,6 +102,11 @@ img{
 
 .section-new-transaction,
 .section-new-transaction form{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-new-transaction form .form-input{
     display: flex;
     flex-direction: column;
 }
@@ -166,7 +171,12 @@ img{
 }
 
 .table-transaction-statement tfoot th{
+    font-style: normal;
     border-top: 4px double #aaa;
+}
+
+.table-transaction-statement tfoot em{
+    font-style: normal;
 }
 
 .section-transaction-statement td:first-child,
@@ -204,6 +214,11 @@ img{
         flex-grow: 1;
     }
 
+    .system-title{
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+
     .main-content .container{
         flex-direction: column;
     }
@@ -218,12 +233,11 @@ img{
         flex-direction: column;
 
         background: #000;
-        padding: 1em;
         margin: 0;
 
         height: 100%;
         width: 90%;
-        max-width: 300px;
+        max-width: 250px;
 
         position: fixed;
         z-index: 1;
@@ -244,12 +258,24 @@ img{
     }
 
     .navbar-menu li{        
-        padding: 1em 0;
+        padding: 0.5em 1em;
         width: 100%;
     }
 
     .navbar-menu li {
         border-left: none;
+    }
+
+    .navbar-menu li:nth-child(2) {
+        order: -1;
+    }
+
+    .navbar-menu .active {
+        background-color: #ccc;
+    }
+
+    .navbar-menu .active a {
+        color: #222;
     }
 
     .active-menu::after{
@@ -275,13 +301,50 @@ img{
     }
 }
 
+@media (min-width: 684px) and (max-width: 880px){
+    .section-new-transaction{
+        margin-bottom: 1.125em;
+    }
+    
+    .section-new-transaction form {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    .section-new-transaction form button {
+        padding: 0.5em 2em;
+    }
+
+    .form-input{
+        margin-left: 0.5em;  
+        flex-grow: 1;      
+    }
+
+    .form-input:first-child,
+    .form-input:last-child{
+        margin-left: 0;
+    }
+
+    .transaction,
+    .price{
+        flex-basis: 15%;
+    }
+
+    .product{
+        flex-basis: 40%;
+    }
+}
+
 @media (max-width:540px){
+
+    .container{
+        padding: 0.5em;
+    }
 
     .brand{
         background-image: url(../midia/logo-viavarejo-mobile.svg);
-        width: 120px;
-        background-position: 50%;
-        height: 68px;
+        width: 80px;
+        height: 40px;
     }
 
     .section-new-transaction h1{
@@ -297,6 +360,18 @@ img{
     .section-transaction-statement{
         padding: 2em 0 0 0;
     }
+}
+
+@media (max-width:345px){
+    .brand{
+        width: 60px;
+        height: 30px;
+    }
+
+    .system-title{
+        font-size: 1.125em;
+    }
+
 }
 
 /* mobile menu */ 
@@ -326,6 +401,7 @@ img{
     position: relative;
     height: 1em;
     width: 1em;
+    margin: 0.375em;
 }
 
 .close-menu::before{

@@ -10,7 +10,7 @@
     <title>Controle Financeiro</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="resources/css/default.css">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                 <ul>
                     <li><a href="#">dashboard</a></li>
                     <li><a href="#">resumo</a></li>
-                    <li><a href="#">configurações</a></li>
+                    <li class="active"><a href="#">configurações</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,18 +41,24 @@
             <section class="section-new-transaction">
                 <h1>Nova transação</h1>
                 <form>
-                    <label for="transaction-type">Tipo de transação</label>
-                    <select name="input-transaction-type" id="transaction-type" required>
-                        <option value="1">Compra</option>
-                        <option value="2">Venda</option>
-                    </select>
+                    <div class="form-input transaction">
+                        <label for="transaction-type">Tipo de transação</label>
+                        <select name="input-transaction-type" id="transaction-type" required>
+                            <option value="1">Compra</option>
+                            <option value="2">Venda</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-input product">
+                        <label for="name">Nome da mercadoria</label>
+                        <input type="text" name="input-name" id="name" placeholder="Digite o nome da mercadoria" required>
+                    </div>
 
-                    <label for="name">Nome da mercadoria</label>
-                    <input type="text" name="input-name" id="name" placeholder="Digite o nome da mercadoria" required>
-
-                    <label for="price">Valor (R$)</label>
-                    <input type="number" name="input-price" id="price" min="0.01" step="0.01" placeholder="R$ 0,00" required>
-
+                    <div class="form-input price">
+                        <label for="price">Valor (R$)</label>
+                        <input type="number" name="input-price" id="price" min="0.01" step="0.01" placeholder="R$ 0,00" required>
+                    </div>
+                    
                     <button type="submit" class="buy-button">Adicionar transação</button>
                 </form>
             </section>
@@ -79,8 +85,8 @@
                     <tfoot>
                         <tr>
                             <th></th>
-                            <th><em>Total</em></th>
-                            <th><em>R$ <sub>[lucro]</sub></em></th>
+                            <th>Total</th>
+                            <th><em>R$ [lucro]</em></th>
                         </tr>
                     </tfoot>
                 </table>
