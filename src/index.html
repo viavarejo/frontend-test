@@ -40,60 +40,49 @@
         <div class="container">
             <section class="section-new-transaction">
                 <h1>Nova transação</h1>
-                <form>
-                    <div class="form-input transaction">
-                        <label for="transaction-type">Tipo de transação</label>
-                        <select name="input-transaction-type" id="transaction-type" required>
+                <div class="alert-transaction"><p></p></div>
+                <form method="POST" onsubmit="transacaoController.adicionaTransacao(event)">
+                    <div class="form-input">
+                        <label for="tipo-transacao">Tipo de transação</label>
+                        <select name="input-tipo-transacao" id="tipo-transacao" required>
                             <option value="1">Compra</option>
                             <option value="2">Venda</option>
                         </select>
                     </div>
                     
-                    <div class="form-input product">
-                        <label for="name">Nome da mercadoria</label>
-                        <input type="text" name="input-name" id="name" placeholder="Digite o nome da mercadoria" required>
+                    <div class="form-input">
+                        <label for="nome-mercadoria">Nome da mercadoria</label>
+                        <input type="text" name="input-nome-mercadoria" id="nome-mercadoria" placeholder="Digite o nome da mercadoria" required>
                     </div>
 
-                    <div class="form-input price">
-                        <label for="price">Valor (R$)</label>
-                        <input type="number" name="input-price" id="price" min="0.01" step="0.01" placeholder="R$ 0,00" required>
+                    <div class="form-input">
+                        <label for="valor-mercadoria">Valor (R$)</label>
+                        <input type="number" name="input-valor-mercadoria" id="valor-mercadoria" min="0.01" step="0.01" placeholder="R$ 0,00" required>
                     </div>
                     
-                    <button type="submit" class="buy-button">Adicionar transação</button>
+                    <button type="submit">Adicionar transação</button>
                 </form>
             </section>
 
             <section class="section-transaction-statement">
                 <h1>Extrato de transações</h1>
-                <table class="table-transaction-statement">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Mercadoria</th>
-                            <th>Valor</th>
-                        </tr>
-                    </thead>
+                <table id="tbl-extrato-transacoes" class="table-transaction-statement">
 
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-
-                    <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Total</th>
-                            <th><em>R$ [lucro]</em></th>
-                        </tr>
-                    </tfoot>
                 </table>
             </section>
         </div>
     </main>
     <footer class="main-footer"></footer>
+    <script src="resources/js/app/models/Transacao.js"></script>
+    <script src="resources/js/app/models/ExtratoTransacoes.js"></script>
+    <script src="resources/js/app/views/View.js"></script>
+    <script src="resources/js/app/views/TransacoesView.js"></script>
+    <script src="resources/js/app/models/Mensagem.js"></script>
+    <script src="resources/js/app/views/MensagemView.js"></script>
+    <script src="resources/js/app/controllers/TransacaoController.js"></script>
     <script src="resources/js/menu.js"></script>
+    <script>
+        let transacaoController = new TransacaoController();
+    </script>
 </body>
 </html>

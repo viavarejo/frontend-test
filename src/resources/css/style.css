@@ -23,6 +23,18 @@ img{
     max-width: 100%;
 }
 
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
 /* header */
 /* nav */
 .main-header .container{
@@ -141,14 +153,6 @@ img{
     padding: 0.325em 0.5em;
     border: 1px solid #aaa;
     border-radius: 3px;
-}
-
-.sale-button{
-    background-color: #12483a;
-    color: #febf1a;
-}
-
-.buy-button{
     background-color: #febf1a;
     color: #12483a;
 }
@@ -179,13 +183,6 @@ img{
     font-style: normal;
 }
 
-.section-transaction-statement td:first-child,
-.section-transaction-statement th:first-child,
-.section-transaction-statement td:last-child,
-.section-transaction-statement th:last-child{
-    text-align: right;
-}
-
 /* footer */
 .main-footer{
     position: fixed;
@@ -202,14 +199,14 @@ img{
     }
 }
 
-@media not all and (max-width: 880px){
+@media not all and (max-width: 790px){
     .open-menu,
     .close-menu {
         display: none;
     }
 }
 
-@media (max-width: 880px){
+@media (max-width: 790px){
     .navbar-brand{
         flex-grow: 1;
     }
@@ -301,7 +298,7 @@ img{
     }
 }
 
-@media (min-width: 684px) and (max-width: 880px){
+@media (min-width: 684px) and (max-width: 790px){
     .section-new-transaction{
         margin-bottom: 1.125em;
     }
