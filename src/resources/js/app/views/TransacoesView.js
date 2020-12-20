@@ -1,9 +1,12 @@
-class TransacoesView extends View {
+import {View} from "../views/View.js";
+import {FormataMoeda} from "../helpers/FormataMoeda.js";
+
+export class TransacoesView extends View {
     constructor(elemento) {
         super(elemento);
     }
 
-    _template(model) {
+    _template(model) {        
         if(model.transacoes.length > 0){
             return `
             <thead>
@@ -17,8 +20,8 @@ class TransacoesView extends View {
                 ${model.transacoes.map(item => `
                         <tr>
                             <td class="text-right">${item.tipoTransacao==1?'-':'+'}</td>
-                            <td>${item.mercadoria}</td>
-                            <td class="text-right">R$ ${item.valor}</td>
+                            <td class="lowercase">${item.mercadoria} </td>
+                            <td class="text-right">${FormataMoeda.formatarMoeda(item.valor)}</td>
                         </tr>
                         `).join('')}
             </tbody>
@@ -27,8 +30,8 @@ class TransacoesView extends View {
                     <th></th>
                     <th>Total</th>
                     <th class="text-right">
-                        <p>R$ ${model.total}<p> 
-                        <em> ${model.total > 0?'[lucro]':'[prejuizo]'} </em>
+                        <p>${FormataMoeda.formatarMoeda(model.total)}<p> 
+                        <em class="uppercase"> ${model.total > 0?'[lucro]':'[prejuízo]'} </em>
                     </th>
                 </tr>
             </tfoot>
@@ -50,4 +53,4 @@ class TransacoesView extends View {
         </tbody> 
         `
     }
-}
+} 
