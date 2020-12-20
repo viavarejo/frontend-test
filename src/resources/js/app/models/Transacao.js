@@ -1,4 +1,4 @@
-class Transacao {
+export class Transacao {
     constructor(tipoTransacao, mercadoria, valor){
         this._tipoTransacao = tipoTransacao;
         this._mercadoria = mercadoria;

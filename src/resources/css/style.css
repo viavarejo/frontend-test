@@ -35,6 +35,22 @@ img{
     text-align: center;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.alert-success{
+    margin: 1em 0;
+    background: rgba(32, 129, 71, 0.5);
+    padding: 0.325em 0.5em;
+    border: 1px solid #12483a;
+    border-radius: 3px;
+}
+
 /* header */
 /* nav */
 .main-header .container{
@@ -113,22 +129,26 @@ img{
 }
 
 .section-new-transaction,
-.section-new-transaction form{
+.section-new-transaction .form-group{
     display: flex;
     flex-direction: column;
 }
 
-.section-new-transaction form .form-input{
+.section-new-transaction form{
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.section-new-transaction .form-group .form-input{
     display: flex;
     flex-direction: column;
 }
 
 .section-new-transaction {
     width: 33%;
-    padding: 1em;
-    border: 1px solid #aaa;
-    border-radius: 4px;
 }
+
 .section-new-transaction h1,
 .section-transaction-statement h1{
     font-size: 1.125em;
@@ -303,7 +323,7 @@ img{
         margin-bottom: 1.125em;
     }
     
-    .section-new-transaction form {
+    .section-new-transaction .form-group {
         flex-flow: row wrap;
         justify-content: flex-end;
     }
@@ -348,14 +368,17 @@ img{
         display: none;
     }
 
-    .section-new-transaction{
+    .section-new-transaction form{
         border: none;
-        padding: 0 0 2em;
+    }
+
+    .section-new-transaction{
+        padding-bottom: 1em;
         border-bottom: 1px solid #ccc;
     }
 
     .section-transaction-statement{
-        padding: 2em 0 0 0;
+        padding-top: 1em;
     }
 }
 
@@ -368,7 +391,6 @@ img{
     .system-title{
         font-size: 1.125em;
     }
-
 }
 
 /* mobile menu */ 

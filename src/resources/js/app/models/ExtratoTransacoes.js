@@ -1,21 +1,32 @@
-class ExtratoTransacoes{
+export class ExtratoTransacoes{
     constructor(){
-        this._transacoes = [];
-        this._total = 0;
+        this._transacoes = JSON.parse(localStorage.getItem('transacoes')) || [];
+        this._total = (localStorage.getItem('total')*1);
     }
 
     adiciona(transacao){
-        this._transacoes.push(transacao);
+        const novaTransacao = {
+            tipoTransacao: transacao.tipoTransacao,
+            mercadoria: transacao.mercadoria,
+            valor: transacao.valor
+        };
+            
+        const atualizaTransacoes = [...this._transacoes, novaTransacao];
+        localStorage.setItem('transacoes', JSON.stringify(atualizaTransacoes));
+
+        this._transacoes = JSON.parse(localStorage.getItem('transacoes'));
+
         this._calcularTotal(transacao.tipoTransacao, transacao.valor);
     }
 
     _calcularTotal(tipoTransacao, valor){
-        //1 = compra, 2 = venda
-        this._total += (tipoTransacao == 1)?-valor:valor; 
+        //tipoTransacao: 1 = compra, 2 = venda
+        this._total += (tipoTransacao == 1)?-valor:valor;
+        localStorage.setItem('total', this._total);
     }
 
-    get transacoes(){
-        return [].concat(this._transacoes);
+    get transacoes(){ 
+        return this._transacoes;
     }
 
     get total(){
