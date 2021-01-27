@@ -1,7 +1,3 @@
-# Demo
-
-[Demo - Teste Front-End](https://transacoes.easystems.com.br)
-
 # Teste de front-end Via Varejo
 
 Este teste busca avaliar quesitos técnicos para as pessoas que se candidatem às vagas de desenvolvimento front-end da Via Varejo.
