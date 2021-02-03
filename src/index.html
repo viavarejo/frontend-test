@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Controle financeiro para transações de compras e vendas de mercadorias. Teste de front-end Via Varejo.">
+
+    <link rel="shortcut icon" href="resources/midia/favicon.png">
+    <title>Controle Financeiro</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="brand"></a>
+                <h1 class="system-title">
+                    Controle financeiro
+                </h1>
+            </div>
+            <button type="button" class="open-menu" data-btn-open-menu>Menu</button>
+            <nav class="navbar-menu">
+                <button type="button" class="close-menu" data-btn-close-menu>Fechar</button>
+                <ul>
+                    <li><a href="#">dashboard</a></li>
+                    <li><a href="#">resumo</a></li>
+                    <li class="active"><a href="#">configurações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <section class="section-new-transaction">                
+                <div alert-transaction></div>
+                <form form-new-transaction>
+                    <h1>Nova transação</h1>
+                    <div class="form-group">
+                        <div class="form-input">
+                            <label for="tipo-transacao">Tipo de transação</label>
+                            <select data-form-type-transaction required>
+                                <option value="1">Compra</option>
+                                <option value="2">Venda</option>
+                            </select>
+                        </div>                        
+                        <div class="form-input">
+                            <label for="nome-mercadoria">Nome da mercadoria</label>
+                            <input type="text" placeholder="Digite o nome da mercadoria" data-form-name-product required>
+                        </div>    
+                        <div class="form-input">
+                            <label for="valor-mercadoria">Valor (R$)</label>
+                            <input type="number" min="0.01" step="0.01" placeholder="R$ 0,00" data-form-value required>
+                        </div>                    
+                        <button type="submit">Adicionar transação</button>
+                    </div>
+                </form>
+            </section>
+            <section class="section-transaction-statement">
+                <h1>Extrato de transações</h1>
+                <table class="table-transaction-statement" table-transaction>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer"></footer>
+    <script type="module" src="resources/js/main.js"></script>
+</body>
+</html>

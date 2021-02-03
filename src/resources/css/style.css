@@ -1,0 +1,432 @@
+/* reset css start */
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+
+/* global*/
+body{
+    font-family: "Lato";
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.alert-success{
+    margin: 1em 0;
+    background: rgba(32, 129, 71, 0.5);
+    padding: 0.325em 0.5em;
+    border: 1px solid #12483a;
+    border-radius: 3px;
+}
+
+/* header */
+/* nav */
+.main-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu,
+.navbar-menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.main-header{
+    width: 100%;
+    margin-bottom: 1.2em;
+    background-color: #eee;
+    padding: 1em 0;
+}
+
+.brand{
+    background-image: url(../midia/logo-viavarejo.svg);
+    background-size: cover;
+    width: 150px;
+    height: 33px;
+    background-position: 50%;
+}
+
+.system-title{
+    margin: 0 1em;
+    font-size: 1.25em;
+}
+
+.navbar-menu{
+    background: #fff;
+    border-radius: 4px;
+    height: 2.75em;
+}
+
+.navbar-menu li {
+    list-style-type: none;
+    padding: 0 1em;
+}
+
+.navbar-menu li {
+    border-left: 1px solid #aaa;
+}
+
+.navbar-menu li:first-child {
+    border-left: none;
+}
+
+.navbar-menu a {  
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar-menu a:hover {  
+    opacity: 0.6;
+    text-decoration: underline;
+}
+
+/* main */
+/* sections */
+.main-content .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-new-transaction,
+.section-new-transaction .form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-new-transaction form{
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.section-new-transaction .form-group .form-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-new-transaction {
+    width: 33%;
+}
+
+.section-new-transaction h1,
+.section-transaction-statement h1{
+    font-size: 1.125em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.section-new-transaction select,
+.section-new-transaction input{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 0.325em 0.5em;
+    margin: 0.4em 0 1em;
+    color: #aaa;
+}
+
+.section-new-transaction input::placeholder{
+    color: #ccc;
+}
+
+.section-new-transaction button{
+    padding: 0.325em 0.5em;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #febf1a;
+    color: #12483a;
+}
+
+.section-transaction-statement{
+    width: 66%;
+    padding: 1em;
+    text-align: left;
+}
+
+.table-transaction-statement{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-transaction-statement thead th, 
+.table-transaction-statement td{
+    padding: 0.75em 0.2em;
+    border-bottom: 1px solid #aaa;
+}
+
+.table-transaction-statement tfoot th{
+    font-style: normal;
+    border-top: 4px double #aaa;
+}
+
+.table-transaction-statement tfoot em{
+    font-style: normal;
+}
+
+/* footer */
+.main-footer{
+    position: fixed;
+    width: 100%;
+    height: 0.5em;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+}
+
+@media (max-width: 1100px){
+    .container{
+        padding: 1em;
+    }
+}
+
+@media not all and (max-width: 790px){
+    .open-menu,
+    .close-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 790px){
+    .navbar-brand{
+        flex-grow: 1;
+    }
+
+    .system-title{
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+
+    .main-content .container{
+        flex-direction: column;
+    }
+
+    .section-new-transaction,
+    .section-transaction-statement
+    {
+        width: 100%;
+    }
+
+    .navbar-menu{
+        flex-direction: column;
+
+        background: #000;
+        margin: 0;
+
+        height: 100%;
+        width: 90%;
+        max-width: 250px;
+
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -90%;
+
+        text-align: right;
+    }
+
+    .active-menu .navbar-menu{
+        right: 0;
+    }
+
+    .navbar-menu,
+    .navbar-menu ul{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-menu li{        
+        padding: 0.5em 1em;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        border-left: none;
+    }
+
+    .navbar-menu li:nth-child(2) {
+        order: -1;
+    }
+
+    .navbar-menu .active {
+        background-color: #ccc;
+    }
+
+    .navbar-menu .active a {
+        color: #222;
+    }
+
+    .active-menu::after{
+        content: "";
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background: transparent;
+    }
+
+    .navbar-menu a {
+        color: #fff;
+    }
+    
+    .navbar-menu a:hover {  
+        opacity: 0.6;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 684px) and (max-width: 790px){
+    .section-new-transaction{
+        margin-bottom: 1.125em;
+    }
+    
+    .section-new-transaction .form-group {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    .section-new-transaction form button {
+        padding: 0.5em 2em;
+    }
+
+    .form-input{
+        margin-left: 0.5em;  
+        flex-grow: 1;      
+    }
+
+    .form-input:first-child,
+    .form-input:last-child{
+        margin-left: 0;
+    }
+
+    .transaction,
+    .price{
+        flex-basis: 15%;
+    }
+
+    .product{
+        flex-basis: 40%;
+    }
+}
+
+@media (max-width:540px){
+
+    .container{
+        padding: 0.5em;
+    }
+
+    .brand{
+        background-image: url(../midia/logo-viavarejo-mobile.svg);
+        width: 80px;
+        height: 40px;
+    }
+
+    .section-new-transaction h1{
+        display: none;
+    }
+
+    .section-new-transaction form{
+        border: none;
+    }
+
+    .section-new-transaction{
+        padding-bottom: 1em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .section-transaction-statement{
+        padding-top: 1em;
+    }
+}
+
+@media (max-width:345px){
+    .brand{
+        width: 60px;
+        height: 30px;
+    }
+
+    .system-title{
+        font-size: 1.125em;
+    }
+}
+
+/* mobile menu */ 
+.open-menu,
+.close-menu{
+    background: none;
+    border: 0;
+    outline: none;
+    -webkik-appearance: none;
+    font-size: 2em;
+    text-indent: -999em;
+}
+
+.open-menu{
+    height: 0;
+    width: .75em;
+    padding-top: .125em;
+    border-top: .375em double #222;
+    border-bottom: .125em solid #222;
+    float: right;
+    vertical-align: middle;
+}
+
+.close-menu{
+    font-size: 2.75em;
+    color: #fff;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    margin: 0.375em;
+}
+
+.close-menu::before{
+    content: '\00D7';
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+}
